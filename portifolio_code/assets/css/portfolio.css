@@ -778,7 +778,39 @@ li + li {
 }
 
 .timeline-grid {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.about-focus-grid {
+  display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.about-focus-grid article {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background:
+    linear-gradient(145deg, rgba(111, 135, 155, 0.1), transparent 48%),
+    var(--panel);
+}
+
+.about-focus-grid span {
+  color: var(--metal-soft);
+  font-size: 0.82rem;
+  font-weight: 950;
+}
+
+.about-focus-grid h3 {
+  margin-top: 26px;
+  color: var(--ink);
+}
+
+.about-focus-grid p {
+  margin-top: 12px;
+  color: var(--soft);
 }
 
 .timeline-grid article,
@@ -964,6 +996,30 @@ li + li {
   max-width: none;
 }
 
+.summary-label,
+.summary-youtube {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+.summary-youtube {
+  border-left: 1px solid var(--line-strong);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.summary-youtube:hover,
+.summary-youtube:focus-visible {
+  background: var(--chrome);
+  color: var(--bg);
+  outline: none;
+}
+
 .project-audio[open] summary {
   width: 100%;
   border: 0;
@@ -978,7 +1034,7 @@ li + li {
   min-height: 42px;
   align-items: center;
   justify-content: center;
-  padding: 10px 18px;
+  padding: 0;
   border: 1px solid var(--line-strong);
   border-radius: 6px;
   background: rgba(0, 0, 0, 0.54);
@@ -997,7 +1053,12 @@ li + li {
 }
 
 .audio-panel summary::before {
-  margin-right: 9px;
+  align-self: stretch;
+  display: grid;
+  width: 34px;
+  place-items: center;
+  margin-right: 0;
+  border-right: 1px solid var(--line-strong);
   color: var(--chrome);
   content: ">";
 }
@@ -1658,7 +1719,8 @@ figcaption {
   }
 
   .timeline-grid,
-  .info-columns {
+  .info-columns,
+  .about-focus-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1742,6 +1804,7 @@ figcaption {
   }
 
   .stat-grid,
+  .about-focus-grid,
   .teaser-grid,
   .skill-grid,
   .timeline-grid,

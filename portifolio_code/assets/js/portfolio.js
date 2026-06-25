@@ -157,6 +157,12 @@
     requestParallax();
   }
 
+  document.querySelectorAll(".summary-youtube").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  });
+
   const lightboxButtons = Array.from(document.querySelectorAll("[data-lightbox-kind]"));
   if (lightboxButtons.length) {
     const overlay = document.createElement("div");
