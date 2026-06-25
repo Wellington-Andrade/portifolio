@@ -5,3 +5,7 @@
 *.zip
 _shot_*.png
 validacao-*.png
+
+.vercel
+.env*
+node_modules/
