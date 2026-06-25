@@ -1,0 +1,7 @@
+Meu lançamento mais recente:
+
+fiz a produção e direção executiva, roteiro do clipe, direção do clipe, distribuição, capa, e todo o resto que fiz nos outros.
+
+Esse precisa destacar que editei o clipe usando o premiere e o touchdesigner e que o clipe foi editado com um sistema que responde as batidas da música.
+Alem disso, fiz um script em python para sortear frases que se relacionam com a música pra elas serem plotadas na tela junto com os blob tracker.
+

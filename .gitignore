@@ -1,0 +1,7 @@
+/.agents/
+/.codex/
+/.vscode/
+/_project-files/
+*.zip
+_shot_*.png
+validacao-*.png
