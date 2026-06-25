@@ -32,26 +32,10 @@
     cursor.setAttribute("aria-hidden", "true");
     document.body.append(cursor);
 
-    let cursorX = window.innerWidth / 2;
-    let cursorY = window.innerHeight / 2;
-    let renderedX = cursorX;
-    let renderedY = cursorY;
-
     window.addEventListener("pointermove", (event) => {
-      cursorX = event.clientX;
-      cursorY = event.clientY;
       cursor.classList.add("is-active");
-      root.style.setProperty("--pointer-x", `${cursorX}px`);
-      root.style.setProperty("--pointer-y", `${cursorY}px`);
+      cursor.style.transform = `translate3d(${event.clientX - 11}px, ${event.clientY - 11}px, 0)`;
     });
-
-    const renderCursor = () => {
-      renderedX += (cursorX - renderedX) * 0.2;
-      renderedY += (cursorY - renderedY) * 0.2;
-      cursor.style.transform = `translate3d(${renderedX - 11}px, ${renderedY - 11}px, 0)`;
-      requestAnimationFrame(renderCursor);
-    };
-    renderCursor();
   }
 
   const getFullscreenElement = () =>
